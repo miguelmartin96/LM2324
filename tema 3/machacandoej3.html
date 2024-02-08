@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calificaciones</title>
+    <style>
+        #aviso{
+            color: red
+        }
+    </style>
+    <script src="funcionesej3.js"></script>
+</head>
+<body>
+    <h1>Calificaciones del Ciclo</h1>
+    <p>Rellene con tus Notas para calcular la media</p>
+    <input type="text" id="numero">
+    <p id="aviso"></p>
+    <p id="notas"></p> <!--aqui se muestran las notas introducidas-->
+    <p id="resultado"></p> <!--aqui la media resultado-->
+    <button onclick="anadir()">Añadir Notas</button>
+    <button onclick="borrar()">Borrar Notas</button>
+    <button onclick="media()">Calcular Media</button>
+</body>
+</html>
