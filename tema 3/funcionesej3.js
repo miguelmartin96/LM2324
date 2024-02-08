@@ -22,6 +22,10 @@ function anadir() {
 }
 
 function borrar() {
+    document.getElementById("aviso").innerHTML="";
+    document.getElementById("notas").innerHTML="";
+    document.getElementById("resultado").innerHTML="";
+    notas=[];
 
 }
 function media() {
@@ -30,5 +34,5 @@ function media() {
         total = total + notas[i]
     }
     total = total / notas.length;
-    document.getElementById('media').innerHTML = total.toFixed(2);
+    document.getElementById("resultado").innerHTML = total.toFixed(2);
 }
