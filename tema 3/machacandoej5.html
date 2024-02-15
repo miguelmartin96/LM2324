@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+    <script src="funcionesej5.js"></script>
+    <script>
+        var listaNumeros=[];
+        function anadir(){
+            let numero =parseFloat(document.getElementById("numero").value);
+            listaNumeros.push(numero);
+            document.getElementById("numeros").innerHTML = listaNumeros;
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo del elemento mayor o menor de un array</h1>
+    <input type="text" id="numero" placeholder="Introduce un Número">
+    <p id="numeros"></p>
+    <p id="resultado"></p>
+    <button onclick="imprimir(listaNumeros)">Imprimir Elementos</button>
+    <button onclick="anadir()">Añadir Número</button>
+    <button onclick="var maximo=mayor(listaNumeros);document.getElementById('resultado').innerHTML=maximo;">Calcula el Mayor</button>
+    <button onclick="var minimo=menor(listaNumeros);document.getElementById('resultado').innerHTML=minimo;">Calcula el Menor</button>
+</body>
+</html>
