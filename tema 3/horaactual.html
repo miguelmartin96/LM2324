@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+</head>
+<body>
+    <p id="texto"></p>
+    <script>
+        function cargar(){
+            let cadena = localStorage.getItem("ultimaFechahora");
+            var hoy = new Date();
+            var ahora = hoy.toLocaleString();
+            if (cadena!=null)
+            {
+                document.getElementById("texto").innerHTML="Se conecto la ultima vez el dia "+cadena;
+
+            }
+            else
+            {
+                document.getElementById("texto").innerHTML="Es la primera vez q te conectas"
+            }
+            localStorage.setItem("ultimaFechahora",ahora);
+        }
+        window.onload = cargar()
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitas</title>
+</head>
+<body>
+    <script>
+        function contador(){
+            let visitas =localStorage.getItem("visitas");
+            if (visitas!=null)
+            {
+                visitas = parseInt(visitas);
+                document.getElementById("texto").innerHTML="Has visitado esta página"+visitas+" veces";
+                visitas = visitas+1;
+                localStorage.setItem("visitas", visitas);
+            }
+            else{
+                document.getElementById("texto").innerHTML="Bienvenido por primera vez, a partir de ahora contaremos cada vez q vuelvas"
+            }
+        }
+        window.onload = contador()
+    </script>
+</body>
+</html>
