@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cambio de tema</title>
+</head>
+<body>
+    <style>
+        body {
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        .temaoscuro {
+          background-color: black;
+          color: white;
+        }
+        </style>
+        </head>
+        <body>
+        <h2>Tema Oscuro/Tema Claro</h2>
+        <button onclick="temClaro()">Tema Claro</button>
+        <button onclick="temaOscuro()">Tema Oscuro</button>
+        <script>
+        function temaOscuro() {
+           var element = document.body;
+           element.classList.toggle("temaoscuro");
+        }
+        function cargaPagina(){
+            let valor=localStorage.getItem("info")
+            if (valor!=null)
+            alert("Bienvenido"+ valor);
+        }
+        function guardar(){
+            let info = document.getElementById("info").value;
+            localStorage.setItem("info",info);
+        }
+        function borrar(){
+            localStorage.clear()
+        }
+        window.onload = cargaPagina();
+        </script>
+</body>
+</html>
