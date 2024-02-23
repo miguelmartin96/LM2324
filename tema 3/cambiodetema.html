@@ -19,18 +19,16 @@
         </style>
         </head>
         <body>
-        <h2>Tema Oscuro/Tema Claro</h2>
-        <button onclick="temClaro()">Tema Claro</button>
+        <h2 >Tema Oscuro/Tema Claro</h2>
+        <button onclick="temaClaro()">Tema Claro</button>
         <button onclick="temaOscuro()">Tema Oscuro</button>
         <script>
         function temaOscuro() {
            var element = document.body;
            element.classList.toggle("temaoscuro");
         }
-        function cargaPagina(){
-            let valor=localStorage.getItem("info")
-            if (valor!=null)
-            alert("Bienvenido"+ valor);
+        function cargaTema(){
+           let
         }
         function guardar(){
             let info = document.getElementById("info").value;
@@ -39,7 +37,7 @@
         function borrar(){
             localStorage.clear()
         }
-        window.onload = cargaPagina();
+        window.onload = cargaTema();
         </script>
 </body>
 </html>
